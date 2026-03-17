@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA Search Agent — Find Anyone, Anywhere, In Seconds</title>
+    <meta name="description" content="ARIA Search searches your ATS, VMS, and external databases simultaneously. Ranked results with match scores and full provenance.">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/marketing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="../" class="nav-brand">
+            <div class="nav-brand-icon"><i class="fas fa-cube"></i></div>
+            <div>ARIA <span class="nav-brand-sub">Orchestration Solutions</span></div>
+        </a>
+        <div class="nav-links">
+            <div class="nav-dropdown">
+                <span class="nav-link">Agents <i class="fas fa-chevron-down chevron"></i></span>
+                <div class="dropdown-menu">
+                    <div class="dropdown-label">AI Agents</div>
+                    <a href="../convo/" class="dropdown-item"><i class="fas fa-microphone-alt"></i> ARIA Talk</a>
+                    <a href="../agents/chat-search.html" class="dropdown-item"><i class="fas fa-search"></i> ARIA Search</a>
+                    <a href="../agents/document-generation.html" class="dropdown-item"><i class="fas fa-file-alt"></i> ARIA Docs <span class="dropdown-badge coming-soon">Coming Soon</span></a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <span class="nav-link">Workflows <i class="fas fa-chevron-down chevron"></i></span>
+                <div class="dropdown-menu">
+                    <div class="dropdown-label">By Agent</div>
+                    <a href="../workflows/conversational.html" class="dropdown-item"><i class="fas fa-comments"></i> Conversational</a>
+                    <a href="../workflows/chat-search.html" class="dropdown-item"><i class="fas fa-search"></i> Chat & Search</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-label">By Team</div>
+                    <a href="../workflows/talent-acquisition.html" class="dropdown-item"><i class="fas fa-user-tie"></i> Talent Acquisition</a>
+                    <a href="../workflows/people-operations.html" class="dropdown-item"><i class="fas fa-users"></i> People Operations</a>
+                    <a href="../workflows/procurement.html" class="dropdown-item"><i class="fas fa-box-open"></i> Procurement</a>
+                </div>
+            </div>
+            <a href="../pricing.html" class="nav-link">Pricing</a>
+            <a href="#" class="nav-cta"><i class="fas fa-calendar-alt"></i> Book a Demo</a>
+        </div>
+        <button class="nav-mobile"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- ============================================================
+     AGENT HERO
+     ============================================================ -->
+<section class="agent-hero">
+    <div class="container">
+        <div class="agent-hero-grid">
+            <!-- Left Column -->
+            <div class="agent-hero-text fade-in-up">
+                <div class="agent-label" style="background:#EFF6FF;color:#3B82F6"><i class="fas fa-search"></i> ARIA Search Agent</div>
+                <h1>Find Anyone, Anywhere, In Seconds.</h1>
+                <p class="subtitle">Searches your ATS, VMS, and external databases simultaneously. Ranked results with match scores and full provenance — so you know exactly where every result came from.</p>
+                <div class="agent-hero-stats">
+                    <div class="agent-hero-stat">
+                        <strong>70%</strong>
+                        <span>Less Research</span>
+                    </div>
+                    <div class="agent-hero-stat">
+                        <strong>5x</strong>
+                        <span>Throughput</span>
+                    </div>
+                    <div class="agent-hero-stat">
+                        <strong>99%</strong>
+                        <span>Accuracy</span>
+                    </div>
+                    <div class="agent-hero-stat">
+                        <strong>2.4s</strong>
+                        <span>Avg Query</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-calendar-alt"></i> Book a Demo</a>
+                    <a href="../pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+                </div>
+            </div>
+
+            <!-- Right Column — Browser Chrome Mockup -->
+            <div class="fade-in-up delay-2">
+                <div class="browser-chrome">
+                    <div class="browser-bar">
+                        <div class="browser-dots"><span></span><span></span><span></span></div>
+                        <div class="browser-url"><i class="fas fa-lock"></i> search.aria-orchestration.com</div>
+                    </div>
+                    <div class="browser-body">
+                        <div class="search-mockup search-typewriter" data-query="Senior Java Developer, 5+ years, NYC metro area">
+                            <div class="search-bar-mock">
+                                <i class="fas fa-search"></i>
+                                <span class="query"></span>
+                                <span class="cursor"></span>
+                            </div>
+                            <div class="search-meta" style="opacity:0;transition:opacity 0.4s ease">247 candidates found across 3 sources in 2.4s</div>
+                            <div class="search-result" style="opacity:0;transform:translateY(10px);transition:opacity 0.4s ease, transform 0.4s ease">
+                                <div class="search-score">95%</div>
+                                <div class="search-result-info">
+                                    <h5>Sarah Kim</h5>
+                                    <p>8 yrs Java &middot; AWS &middot; Spring Boot &middot; NYC</p>
+                                </div>
+                                <div class="search-source" style="background:#EFF6FF;color:#3B82F6">ATS</div>
+                            </div>
+                            <div class="search-result" style="opacity:0;transform:translateY(10px);transition:opacity 0.4s ease, transform 0.4s ease">
+                                <div class="search-score">91%</div>
+                                <div class="search-result-info">
+                                    <h5>Michael Patel</h5>
+                                    <p>6 yrs Java &middot; Kubernetes &middot; NJ</p>
+                                </div>
+                                <div class="search-source" style="background:#EFF6FF;color:#2563EB">LinkedIn</div>
+                            </div>
+                            <div class="search-result" style="opacity:0;transform:translateY(10px);transition:opacity 0.4s ease, transform 0.4s ease">
+                                <div class="search-score">88%</div>
+                                <div class="search-result-info">
+                                    <h5>Angela Liu</h5>
+                                    <p>5 yrs Java &middot; React &middot; Remote</p>
+                                </div>
+                                <div class="search-source" style="background:var(--aria-light-green);color:var(--aria-green-dark)">Internal Pool</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     THE PROBLEM
+     ============================================================ -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-exclamation-triangle"></i> The Challenge</div>
+            <h2 class="section-title">The Problem With Manual Research</h2>
+            <p class="section-subtitle">Recruiters and procurement teams waste hours every day searching across disconnected systems with no unified view of results.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card fade-in-up delay-1">
+                <div class="card-icon amber"><i class="fas fa-clock"></i></div>
+                <h3>Hours of Manual Searching</h3>
+                <p>Recruiters spend 8+ hours per sourcing cycle searching across multiple platforms, copying data between tabs, and manually comparing candidates.</p>
+            </div>
+            <div class="card fade-in-up delay-2">
+                <div class="card-icon amber"><i class="fas fa-random"></i></div>
+                <h3>Scattered Data, No Rankings</h3>
+                <p>Results spread across ATS, LinkedIn, job boards with no unified scoring. No way to compare candidates from different sources side by side.</p>
+            </div>
+            <div class="card fade-in-up delay-3">
+                <div class="card-icon amber"><i class="fas fa-battery-quarter"></i></div>
+                <h3>Stale Talent Pools</h3>
+                <p>Databases decay without active refresh, leading to wasted outreach on candidates who have moved on, changed roles, or are no longer available.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CAPABILITIES
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-bolt"></i> Capabilities</div>
+            <h2 class="section-title">What ARIA Search Can Do</h2>
+            <p class="section-subtitle">A single search interface that connects every source, scores every result, and tells you exactly where it came from.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card fade-in-up delay-1">
+                <div class="card-icon blue"><i class="fas fa-layer-group"></i></div>
+                <h3>Multi-Source Search</h3>
+                <p>Search ATS, VMS, LinkedIn, and internal databases simultaneously. One query, every source, unified results.</p>
+            </div>
+            <div class="card fade-in-up delay-2">
+                <div class="card-icon blue"><i class="fas fa-crosshairs"></i></div>
+                <h3>JD-Based Matching</h3>
+                <p>Paste a job description and get ranked candidates with match scores. ARIA parses requirements and maps them to candidate profiles automatically.</p>
+            </div>
+            <div class="card fade-in-up delay-3">
+                <div class="card-icon blue"><i class="fas fa-sort-amount-down"></i></div>
+                <h3>Ranked Results</h3>
+                <p>Every result scored with transparent match criteria and provenance. Know exactly why each candidate ranked where they did.</p>
+            </div>
+            <div class="card fade-in-up delay-1">
+                <div class="card-icon blue"><i class="fas fa-fingerprint"></i></div>
+                <h3>Full Provenance</h3>
+                <p>Know exactly which source each result came from with direct links. ATS, LinkedIn, internal pool — every result is traced.</p>
+            </div>
+            <div class="card fade-in-up delay-2">
+                <div class="card-icon blue"><i class="fas fa-file-export"></i></div>
+                <h3>Export & Shortlist</h3>
+                <p>Build shortlists and export to your ATS or as formatted documents. One-click export to keep your workflows moving.</p>
+            </div>
+            <div class="card fade-in-up delay-3">
+                <div class="card-icon blue"><i class="fas fa-gavel"></i></div>
+                <h3>Compliance Search</h3>
+                <p>Search for compliance documents, certifications, and audit records. Find what you need for audits in seconds, not hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-cogs"></i> Process</div>
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">From search query to shortlist in four steps. No training required.</p>
+        </div>
+        <div class="steps-accordion fade-in-up">
+            <div class="step-item active">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h3>Enter Your Search</h3>
+                    <i class="fas fa-chevron-down step-toggle"></i>
+                </div>
+                <div class="step-body">
+                    <p>Type a natural language query or paste a job description. ARIA parses requirements automatically — skills, experience, location, certifications — no Boolean strings needed.</p>
+                    <div class="step-features">
+                        <div class="step-feature"><i class="fas fa-check"></i> Natural language queries (no Boolean required)</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Paste a full job description for automatic parsing</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Saved search templates for recurring roles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h3>Multi-Source Scan</h3>
+                    <i class="fas fa-chevron-down step-toggle"></i>
+                </div>
+                <div class="step-body">
+                    <p>ARIA searches across all connected sources simultaneously — ATS, VMS, LinkedIn, internal pools. Every source is queried in parallel for maximum speed.</p>
+                    <div class="step-features">
+                        <div class="step-feature"><i class="fas fa-check"></i> Parallel search across all connected sources</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> ATS, VMS, LinkedIn, and internal databases</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Average query time: 2.4 seconds</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h3>AI Ranking & Scoring</h3>
+                    <i class="fas fa-chevron-down step-toggle"></i>
+                </div>
+                <div class="step-body">
+                    <p>Results are scored against your criteria with transparent match breakdowns. Every score is explainable — no black-box rankings.</p>
+                    <div class="step-features">
+                        <div class="step-feature"><i class="fas fa-check"></i> Transparent match score with criteria breakdown</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Skills, experience, location, and availability weighting</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Adjustable scoring criteria per search</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h3>Review & Act</h3>
+                    <i class="fas fa-chevron-down step-toggle"></i>
+                </div>
+                <div class="step-body">
+                    <p>Browse ranked results, build shortlists, export profiles, or trigger outreach workflows. Everything you need to move from search to action in one place.</p>
+                    <div class="step-features">
+                        <div class="step-feature"><i class="fas fa-check"></i> Build and share shortlists with hiring managers</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Export profiles to your ATS or as formatted documents</div>
+                        <div class="step-feature"><i class="fas fa-check"></i> Trigger outreach workflows directly from results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     USE CASES
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-bullseye"></i> Use Cases</div>
+            <h2 class="section-title">Built For These Scenarios</h2>
+            <p class="section-subtitle">ARIA Search adapts to your workflow — whether you're sourcing candidates, qualifying suppliers, or auditing compliance records.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card fade-in-up delay-1">
+                <div class="card-icon green"><i class="fas fa-user-check"></i></div>
+                <h3>Candidate Matching</h3>
+                <p>Match candidates to open reqs across your entire database. Rank by skills, experience, location, and availability in one search.</p>
+            </div>
+            <div class="card fade-in-up delay-2">
+                <div class="card-icon green"><i class="fas fa-handshake"></i></div>
+                <h3>Supplier Discovery</h3>
+                <p>Find qualified suppliers by capability, certification, and geography. Compare options with unified scoring across vendor databases.</p>
+            </div>
+            <div class="card fade-in-up delay-3">
+                <div class="card-icon green"><i class="fas fa-database"></i></div>
+                <h3>Pool Management</h3>
+                <p>Refresh and re-engage existing talent pools with availability tracking. Keep your bench current without manual outreach.</p>
+            </div>
+            <div class="card fade-in-up delay-1">
+                <div class="card-icon green"><i class="fas fa-certificate"></i></div>
+                <h3>Compliance Lookup</h3>
+                <p>Search for certifications, training records, and compliance documents. Find what you need for audits in seconds.</p>
+            </div>
+            <div class="card fade-in-up delay-2">
+                <div class="card-icon green"><i class="fas fa-chart-line"></i></div>
+                <h3>Market Intelligence</h3>
+                <p>Research companies, contacts, and market data for outreach. Build intelligence reports with data from multiple sources.</p>
+            </div>
+            <div class="card fade-in-up delay-3">
+                <div class="card-icon green"><i class="fas fa-file-invoice"></i></div>
+                <h3>Document Audits</h3>
+                <p>Scan document repositories for expiring or missing compliance records. Proactive alerts before deadlines hit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     METRICS
+     ============================================================ -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-chart-bar"></i> Results</div>
+            <h2 class="section-title">Measurable Impact</h2>
+            <p class="section-subtitle">Real numbers from real deployments. ARIA Search delivers results you can measure.</p>
+        </div>
+        <div class="stat-cards fade-in-up">
+            <div class="stat-card">
+                <div class="stat-card-icon"><i class="fas fa-clock"></i></div>
+                <div class="stat-card-val" data-counter data-target="70" data-suffix="%">0</div>
+                <div class="stat-card-label">Less Research Time</div>
+                <div class="stat-card-desc">Cut manual sourcing and research time by 70%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <div class="stat-card-val" data-counter data-target="5" data-suffix="x">0</div>
+                <div class="stat-card-label">More Throughput</div>
+                <div class="stat-card-desc">Process 5x more searches per recruiter per day</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-icon"><i class="fas fa-bullseye"></i></div>
+                <div class="stat-card-val" data-counter data-target="99" data-suffix="%">0</div>
+                <div class="stat-card-label">Match Accuracy</div>
+                <div class="stat-card-desc">99% accuracy on candidate-to-requirement matching</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-icon"><i class="fas fa-bolt"></i></div>
+                <div class="stat-card-val" data-counter data-target="2" data-suffix=".4s">0</div>
+                <div class="stat-card-label">Average Query Time</div>
+                <div class="stat-card-desc">Results across all sources in under 3 seconds</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="cta-section">
+    <div class="container fade-in-up">
+        <h2>See ARIA Search in Action</h2>
+        <p>Stop spending hours searching across disconnected systems. See how ARIA Search delivers ranked, sourced results in seconds.</p>
+        <div class="btn-group">
+            <a href="#" class="btn btn-white btn-lg"><i class="fas fa-calendar-alt"></i> Book a Demo</a>
+            <a href="../pricing.html" class="btn btn-ghost btn-lg">View Pricing</a>
+        </div>
+        <div class="cta-sub">Part of ARIA Orchestration Solutions</div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-name">ARIA</div>
+                <div class="footer-brand-sub">Orchestration Solutions</div>
+                <p>Enterprise AI agents and workflows for Talent Acquisition, People Operations, and Procurement teams.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Agents</h4>
+                <a href="../convo/">ARIA Talk</a>
+                <a href="../agents/chat-search.html">ARIA Search</a>
+                <a href="../agents/document-generation.html">ARIA Docs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Workflows</h4>
+                <a href="../workflows/talent-acquisition.html">Talent Acquisition</a>
+                <a href="../workflows/people-operations.html">People Operations</a>
+                <a href="../workflows/procurement.html">Procurement</a>
+                <a href="../workflows/conversational.html">Conversational</a>
+                <a href="../workflows/chat-search.html">Chat & Search</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="../pricing.html">Pricing</a>
+                <a href="#">Security</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 ARIA Orchestration Solutions &middot; Powered by ARIA Industries</span>
+            <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script src="../js/animations.js"></script>
+</body>
+</html>
