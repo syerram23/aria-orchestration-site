@@ -1,5 +1,6 @@
 /* ============================================================
    Workflow Modal — Data + Logic
+   Each workflow has customized mockup content for its use case.
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -20,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate candidate profiles with ARIA Docs'
             ],
             mockup: 'search',
+            searchQuery: 'Java developer, 5+ yrs, remote eligible',
+            searchResults: [
+                { score: '97%', label: 'Sarah Chen', detail: 'Sr. Java Dev · 8 yrs · Available' },
+                { score: '91%', label: 'Marcus Rivera', detail: 'Full-Stack Java · 6 yrs · Open to remote' },
+                { score: '84%', label: 'Priya Sharma', detail: 'Java/Kotlin · 5 yrs · Interviewing' }
+            ],
             link: 'workflows/talent-acquisition.html'
         },
         'screening-matching': {
@@ -38,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate scored profiles and route to hiring managers'
             ],
             mockup: 'talk',
+            talkBubble: 'Tell me about your experience with microservices architecture and cloud deployments.',
             link: 'workflows/talent-acquisition.html'
         },
         'candidate-onboarding': {
@@ -56,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Auto-provision systems and notify hiring manager'
             ],
             mockup: 'talk',
+            talkBubble: "Welcome aboard! Let\u2019s get your paperwork done. Can you upload your government-issued ID?",
             link: 'workflows/talent-acquisition.html'
         },
         'pool-management': {
@@ -73,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Maintain pool freshness and quality scores'
             ],
             mockup: 'search',
+            searchQuery: 'Available .NET developers in talent pool',
+            searchResults: [
+                { score: '94%', label: 'Alex Kim — Available Now', detail: '.NET Core · Last contacted 3 days ago' },
+                { score: '87%', label: 'Jordan Lee — Open', detail: '.NET/Azure · Last contacted 2 weeks ago' },
+                { score: '62%', label: 'Taylor Morgan — Stale', detail: '.NET · Last contacted 90+ days ago' }
+            ],
             link: 'workflows/talent-acquisition.html'
         },
         'client-outreach': {
@@ -90,6 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Track pipeline from outreach to placement'
             ],
             mockup: 'docs',
+            docTitle: 'Candidate Marketing Profile',
+            docScore: 96,
+            docTags: ['Skills Verified', 'References Complete', 'Available Immediately'],
+            docSources: 'ATS profile · 3 references · Skills assessment',
             link: 'workflows/talent-acquisition.html'
         },
         'agentic-matching': {
@@ -107,6 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Auto-notify recruiters of strong fits'
             ],
             mockup: 'search',
+            searchQuery: 'Match: Senior PM role #2847',
+            searchResults: [
+                { score: '96%', label: 'Emily Zhang — Strong Fit', detail: '8 yrs PM · Agile certified · Industry match' },
+                { score: '89%', label: 'David Park — Good Fit', detail: '6 yrs PM · PMP · Adjacent industry' },
+                { score: '78%', label: 'Lisa Nguyen — Partial Fit', detail: '4 yrs PM · Transitioning from dev' }
+            ],
             link: 'workflows/talent-acquisition.html'
         },
         'reference-checks': {
@@ -124,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate reference check report with scores'
             ],
             mockup: 'talk',
+            talkBubble: 'How would you rate their problem-solving ability? Can you share a specific example?',
             link: 'workflows/talent-acquisition.html'
         },
         'supplier-onboarding': {
@@ -132,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             team: 'procurement',
             teamLabel: 'Procurement',
             agents: ['talk', 'docs'],
-            desc: 'Complete supplier intake, document collection, and compliance verification — compressed from 60 days to a single AI-guided conversation.',
+            desc: 'Complete supplier intake, document collection, and compliance verification \u2014 compressed from 60 days to a single AI-guided conversation.',
             steps: [
                 'Create supplier onboarding request with required documents',
                 'Send intake link to supplier contact',
@@ -142,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Auto-populate ERP vendor master with validated data'
             ],
             mockup: 'talk',
+            talkBubble: "Let\u2019s verify your company details. Can you upload your W-9 and certificate of insurance?",
             link: 'workflows/procurement.html'
         },
         'document-audits': {
@@ -160,6 +187,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate audit-ready compliance reports'
             ],
             mockup: 'search',
+            searchQuery: 'Expiring vendor documents, next 30 days',
+            searchResults: [
+                { score: '\u26A0', label: 'Acme Corp \u2014 GL Insurance', detail: 'Expires Apr 12 \u00b7 Renewal requested', scoreColor: 'warning' },
+                { score: '\u2718', label: 'Beta LLC \u2014 W-9', detail: 'Expired Mar 1 \u00b7 Missing renewal', scoreColor: 'danger' },
+                { score: '\u2714', label: 'Gamma Inc \u2014 COI', detail: 'Valid through Dec 2026', scoreColor: 'success' }
+            ],
             link: 'workflows/procurement.html'
         },
         'vendor-scorecards': {
@@ -178,6 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate quarterly scorecard reports'
             ],
             mockup: 'docs',
+            docTitle: 'Q1 Vendor Performance Scorecard',
+            docScore: 87,
+            docTags: ['Quality: 94%', 'On-Time: 87%', 'Compliance: 100%'],
+            docSources: 'VMS data \u00b7 6 stakeholder reviews \u00b7 Compliance records',
             link: 'workflows/procurement.html'
         },
         'risk-assessment': {
@@ -196,6 +233,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate risk assessment reports with recommendations'
             ],
             mockup: 'search',
+            searchQuery: 'Vendor risk screening: Acme Corp',
+            searchResults: [
+                { score: '\u2714', label: 'OFAC Sanctions', detail: 'No matches found \u00b7 Clear', scoreColor: 'success' },
+                { score: '\u26A0', label: 'Adverse Media', detail: '1 flagged article \u00b7 Review needed', scoreColor: 'warning' },
+                { score: '\u2714', label: 'Financial Stability', detail: 'D&B score: 82 \u00b7 Low risk', scoreColor: 'success' }
+            ],
             link: 'workflows/procurement.html'
         },
         'timesheet-audits': {
@@ -214,6 +257,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Track resolution and savings'
             ],
             mockup: 'search',
+            searchQuery: 'Timesheet discrepancies, March 2026',
+            searchResults: [
+                { score: '\u2718', label: 'Rate override \u2014 Vendor #1042', detail: '$85/hr billed vs $75/hr contracted \u00b7 $1,200 delta', scoreColor: 'danger' },
+                { score: '\u26A0', label: 'OT violation \u2014 Vendor #1087', detail: '52 hrs logged, 40 hr cap \u00b7 Needs approval', scoreColor: 'warning' },
+                { score: '\u2714', label: 'Matched \u2014 Vendor #1023', detail: '160 hrs \u00b7 $12,800 \u00b7 Reconciled', scoreColor: 'success' }
+            ],
             link: 'workflows/procurement.html'
         },
         'sow-compliance': {
@@ -232,6 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Track contract renewal dates and terms'
             ],
             mockup: 'docs',
+            docTitle: 'SOW Compliance Analysis',
+            docScore: 78,
+            docTags: ['12 of 14 Terms Met', '2 Gaps Flagged', 'Renewal: 60 days'],
+            docSources: 'SOW v2.1 \u00b7 3 amendments \u00b7 Performance logs',
             link: 'workflows/procurement.html'
         },
         'exit-interviews': {
@@ -250,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate anonymized insights for leadership'
             ],
             mockup: 'talk',
+            talkBubble: 'What aspects of the work environment could we improve for future team members?',
             link: 'workflows/people-operations.html'
         },
         'engagement-surveys': {
@@ -258,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
             team: 'peopleops',
             teamLabel: 'People Operations',
             agents: ['talk', 'docs'],
-            desc: 'Conversational pulse surveys that capture richer data than forms — with 90%+ completion rates.',
+            desc: 'Conversational pulse surveys that capture richer data than forms \u2014 with 90%+ completion rates.',
             steps: [
                 'Define survey questions and target audience',
                 'ARIA Talk initiates conversations at scheduled intervals',
@@ -268,6 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Flag urgent issues for immediate attention'
             ],
             mockup: 'talk',
+            talkBubble: 'On a scale of 1\u201310, how supported do you feel by your manager this quarter?',
             link: 'workflows/people-operations.html'
         },
         'performance-reviews': {
@@ -286,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Highlight development opportunities'
             ],
             mockup: 'talk',
+            talkBubble: 'How effectively does this person collaborate across teams? Can you share an example?',
             link: 'workflows/people-operations.html'
         },
         'internal-mobility': {
@@ -303,6 +359,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Track bench utilization and redeployment rates'
             ],
             mockup: 'search',
+            searchQuery: 'Internal match: Product Manager openings',
+            searchResults: [
+                { score: '94%', label: 'Maria Santos \u2014 Sr. Analyst', detail: 'PM certification \u00b7 3 yrs internal \u00b7 Interested' },
+                { score: '86%', label: 'James Wilson \u2014 Tech Lead', detail: 'Cross-functional exp \u00b7 5 yrs internal \u00b7 On bench' },
+                { score: '73%', label: 'Aisha Patel \u2014 UX Designer', detail: 'Product interest \u00b7 2 yrs internal \u00b7 Exploring' }
+            ],
             link: 'workflows/people-operations.html'
         },
         'checkins-30-60-90': {
@@ -321,6 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate progress trend reports'
             ],
             mockup: 'talk',
+            talkBubble: "You\u2019re at your 30-day mark \u2014 how clear are you on your role and day-to-day responsibilities?",
             link: 'workflows/people-operations.html'
         },
         'global-resource-tracking': {
@@ -338,6 +401,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate global resource dashboards'
             ],
             mockup: 'search',
+            searchQuery: 'Available resources: APAC region',
+            searchResults: [
+                { score: '12', label: 'Singapore \u2014 Available', detail: '12 resources \u00b7 85% utilization \u00b7 3 on bench' },
+                { score: '8', label: 'Tokyo \u2014 Available', detail: '8 resources \u00b7 92% utilization \u00b7 1 on bench' },
+                { score: '5', label: 'Sydney \u2014 Available', detail: '5 resources \u00b7 78% utilization \u00b7 2 on bench' }
+            ],
             link: 'workflows/conversational.html'
         },
         'conversational-training': {
@@ -356,6 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate compliance reports'
             ],
             mockup: 'talk',
+            talkBubble: "Let\u2019s review the compliance module. What are the three key reporting requirements?",
             link: 'workflows/conversational.html'
         },
         'compliance-tracking': {
@@ -373,6 +443,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Generate audit-ready compliance reports'
             ],
             mockup: 'search',
+            searchQuery: 'Expiring certifications, next 60 days',
+            searchResults: [
+                { score: '\u26A0', label: 'SOC 2 Type II \u2014 Vendor A', detail: 'Expires May 15 \u00b7 Renewal in progress', scoreColor: 'warning' },
+                { score: '\u2718', label: 'ISO 27001 \u2014 Vendor C', detail: 'Expired Feb 28 \u00b7 Awaiting re-certification', scoreColor: 'danger' },
+                { score: '\u2714', label: 'HIPAA BAA \u2014 Vendor B', detail: 'Valid through Jan 2027', scoreColor: 'success' }
+            ],
             link: 'workflows/conversational.html'
         }
     };
@@ -394,9 +470,18 @@ document.addEventListener('DOMContentLoaded', () => {
         ).join('');
     }
 
+    // Score badge color helper
+    function scoreBadgeStyle(result) {
+        if (result.scoreColor === 'warning') return 'background:var(--amber-100,#FEF3C7);color:var(--amber-700,#B45309)';
+        if (result.scoreColor === 'danger') return 'background:var(--red-100,#FEE2E2);color:var(--red-600,#DC2626)';
+        if (result.scoreColor === 'success') return 'background:var(--green-100,#DCFCE7);color:var(--green-700,#15803D)';
+        return 'background:var(--aria-light-green);color:var(--aria-green-dark)';
+    }
+
     // Generate mockup HTML based on type
     function mockupHTML(type, wf) {
         if (type === 'talk') {
+            const bubble = wf.talkBubble || wf.steps[2] || wf.steps[1];
             return `
                 <div class="browser-chrome">
                     <div class="browser-bar">
@@ -415,10 +500,24 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div style="width:3px;height:18px;background:var(--aria-green);border-radius:1px;animation:waveAnim 1.2s ease-in-out infinite 0.3s"></div>
                             <div style="width:3px;height:8px;background:var(--aria-green);border-radius:1px;animation:waveAnim 1.2s ease-in-out infinite 0.15s"></div>
                         </div>
-                        <div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 12px;font-size:10px;color:var(--gray-600);font-style:italic;max-width:220px;margin:0 auto">"${wf.steps[2] || wf.steps[1]}"</div>
+                        <div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 12px;font-size:10px;color:var(--gray-600);font-style:italic;max-width:220px;margin:0 auto">"${bubble}"</div>
                     </div>
                 </div>`;
         } else if (type === 'search') {
+            const query = wf.searchQuery || wf.title;
+            const results = wf.searchResults || [
+                { score: '95%', label: 'Top Match', detail: 'High confidence \u00b7 Verified' },
+                { score: '88%', label: 'Strong Match', detail: 'Good fit \u00b7 Review needed' },
+                { score: '76%', label: 'Potential Match', detail: 'Partial fit \u00b7 Flagged' }
+            ];
+            const resultCards = results.map(r => {
+                const style = scoreBadgeStyle(r);
+                return `<div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 10px;margin-bottom:6px;display:flex;align-items:center;gap:8px">
+                            <div style="width:28px;height:28px;min-width:28px;border-radius:6px;${style};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">${r.score}</div>
+                            <div><div style="font-size:11px;font-weight:600;color:var(--aria-navy)">${r.label}</div><div style="font-size:9px;color:var(--gray-500)">${r.detail}</div></div>
+                        </div>`;
+            }).join('');
+            const countText = results.length + ' results found \u00b7 2.4s';
             return `
                 <div class="browser-chrome">
                     <div class="browser-bar">
@@ -428,25 +527,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="browser-body" style="padding:16px;background:var(--gray-50)">
                         <div style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 12px;margin-bottom:10px">
                             <i class="fas fa-search" style="color:var(--gray-400);font-size:11px"></i>
-                            <span style="font-size:11px;color:var(--aria-navy);font-weight:500">${wf.title}</span>
+                            <span style="font-size:11px;color:var(--aria-navy);font-weight:500">${query}</span>
                         </div>
-                        <div style="font-size:9px;color:var(--gray-500);margin-bottom:8px">3 results found · 2.4s</div>
-                        <div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 10px;margin-bottom:6px;display:flex;align-items:center;gap:8px">
-                            <div style="width:28px;height:28px;min-width:28px;border-radius:6px;background:var(--aria-light-green);color:var(--aria-green-dark);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">95%</div>
-                            <div><div style="font-size:11px;font-weight:600;color:var(--aria-navy)">Top Match</div><div style="font-size:9px;color:var(--gray-500)">High confidence · Verified</div></div>
-                        </div>
-                        <div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 10px;margin-bottom:6px;display:flex;align-items:center;gap:8px">
-                            <div style="width:28px;height:28px;min-width:28px;border-radius:6px;background:var(--aria-light-green);color:var(--aria-green-dark);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">88%</div>
-                            <div><div style="font-size:11px;font-weight:600;color:var(--aria-navy)">Strong Match</div><div style="font-size:9px;color:var(--gray-500)">Good fit · Review needed</div></div>
-                        </div>
-                        <div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:8px">
-                            <div style="width:28px;height:28px;min-width:28px;border-radius:6px;background:var(--aria-light-green);color:var(--aria-green-dark);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700">76%</div>
-                            <div><div style="font-size:11px;font-weight:600;color:var(--aria-navy)">Potential Match</div><div style="font-size:9px;color:var(--gray-500)">Partial fit · Flagged</div></div>
-                        </div>
+                        <div style="font-size:9px;color:var(--gray-500);margin-bottom:8px">${countText}</div>
+                        ${resultCards}
                     </div>
                 </div>`;
         } else {
             // docs mockup
+            const docTitle = wf.docTitle || (wf.title + ' Report');
+            const docScore = wf.docScore || 92;
+            const docTags = wf.docTags || ['Verified', 'Complete', 'Compliant'];
+            const docSources = wf.docSources || '3 data sources \u00b7 12 citations \u00b7 Full audit trail';
+            const tagsHTML = docTags.map(t =>
+                `<span style="padding:2px 8px;background:var(--aria-light-green);color:var(--aria-green-dark);border-radius:999px;font-size:9px;font-weight:500">${t}</span>`
+            ).join('');
             return `
                 <div class="browser-chrome">
                     <div class="browser-bar">
@@ -457,11 +552,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--gray-200)">
                             <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--aria-green),var(--aria-green-dark));color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700"><i class="fas fa-file-alt"></i></div>
                             <div>
-                                <div style="font-size:11px;font-weight:600;color:var(--aria-navy)">${wf.title} Report</div>
-                                <div style="font-size:9px;color:var(--gray-500)">Auto-generated · ARIA Docs</div>
+                                <div style="font-size:11px;font-weight:600;color:var(--aria-navy)">${docTitle}</div>
+                                <div style="font-size:9px;color:var(--gray-500)">Auto-generated \u00b7 ARIA Docs</div>
                             </div>
-                            <div style="margin-left:auto;width:36px;height:36px;border-radius:50%;background:conic-gradient(var(--aria-green) 0% 92%,var(--gray-200) 92% 100%);display:flex;align-items:center;justify-content:center;position:relative">
-                                <div style="width:28px;height:28px;border-radius:50%;background:var(--gray-50);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--aria-green-dark)">92</div>
+                            <div style="margin-left:auto;width:36px;height:36px;border-radius:50%;background:conic-gradient(var(--aria-green) 0% ${docScore}%,var(--gray-200) ${docScore}% 100%);display:flex;align-items:center;justify-content:center;position:relative">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--gray-50);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--aria-green-dark)">${docScore}</div>
                             </div>
                         </div>
                         <div style="margin-bottom:8px">
@@ -470,15 +565,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div style="margin-bottom:8px">
                             <div style="font-size:9px;font-weight:700;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Key Findings</div>
-                            <div style="display:flex;gap:4px;flex-wrap:wrap">
-                                <span style="padding:2px 8px;background:var(--aria-light-green);color:var(--aria-green-dark);border-radius:999px;font-size:9px;font-weight:500">Verified</span>
-                                <span style="padding:2px 8px;background:var(--aria-light-green);color:var(--aria-green-dark);border-radius:999px;font-size:9px;font-weight:500">Complete</span>
-                                <span style="padding:2px 8px;background:var(--aria-light-green);color:var(--aria-green-dark);border-radius:999px;font-size:9px;font-weight:500">Compliant</span>
-                            </div>
+                            <div style="display:flex;gap:4px;flex-wrap:wrap">${tagsHTML}</div>
                         </div>
                         <div>
                             <div style="font-size:9px;font-weight:700;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Sources</div>
-                            <div style="font-size:9px;color:var(--gray-500)">3 data sources · 12 citations · Full audit trail</div>
+                            <div style="font-size:9px;color:var(--gray-500)">${docSources}</div>
                         </div>
                     </div>
                 </div>`;

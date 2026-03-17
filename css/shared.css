@@ -37,7 +37,11 @@
     --amber-400: #FBBF24;
     --amber-500: #F59E0B;
     --amber-600: #D97706;
+    --red-100: #FEE2E2;
     --red-500: #EF4444;
+    --red-600: #DC2626;
+    --amber-700: #B45309;
+    --green-700: #15803D;
 
     /* Badge colors */
     --badge-ta: #2563EB;
