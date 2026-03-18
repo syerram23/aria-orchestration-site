@@ -12,7 +12,7 @@
 <body>
 
 <!-- ============================================================
-     NAVIGATION
+     1. NAVIGATION
      ============================================================ -->
 <nav class="nav">
     <div class="nav-inner">
@@ -22,7 +22,22 @@
         </a>
         <div class="nav-links">
             <a href="../" class="nav-link" style="font-size:12px;color:var(--gray-400)">Explore All Agents <i class="fas fa-arrow-right" style="font-size:10px"></i></a>
-            <a href="#use-cases" class="nav-link">Use Cases</a>
+            <div class="nav-dropdown">
+                <a href="#use-cases" class="nav-link">Use Cases <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-label">Enterprise</div>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-user-plus"></i> Employee Onboarding</a>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-handshake"></i> Supplier Onboarding</a>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-clipboard-list"></i> Client Intake &amp; Setup</a>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-shield-alt"></i> Compliance Training</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-label">Individual &amp; Teams</div>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-chart-line"></i> Lead Qualification</a>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-poll"></i> Customer Research</a>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-users"></i> Team Stand-ups</a>
+                    <a href="#use-cases" class="dropdown-item"><i class="fas fa-comments"></i> Feedback Collection</a>
+                </div>
+            </div>
             <a href="#how-it-works" class="nav-link">How It Works</a>
             <a href="#pricing" class="nav-link">Pricing</a>
             <a href="signup.html" class="nav-cta"><i class="fas fa-play-circle"></i> Start Free Trial</a>
@@ -32,7 +47,7 @@
 </nav>
 
 <!-- ============================================================
-     1. HERO
+     2. HERO
      ============================================================ -->
 <section class="convo-hero">
     <div class="container">
@@ -41,7 +56,7 @@
             <div class="convo-hero-text fade-in-up">
                 <div class="section-tag"><i class="fas fa-microphone-alt"></i> AI-Powered Meetings on Autopilot</div>
                 <h1>Replace Every Repetitive Meeting with an AI That Runs It for You.</h1>
-                <p class="subtitle">ARIA Talk is an AI that conducts your meetings for you — screening calls, onboarding sessions, check-ins, training, and more — then delivers scored results and full transcripts. You never have to attend.</p>
+                <p class="subtitle">ARIA Talk is an AI that conducts your meetings for you &mdash; screening calls, onboarding sessions, check-ins, training, and more &mdash; then delivers scored results and full transcripts. You never have to attend.</p>
                 <div class="convo-note">
                     <i class="fas fa-bolt"></i> You don't attend. The AI conducts the entire conversation, asks your questions, scores responses, and delivers a full report.
                 </div>
@@ -80,6 +95,10 @@
                         <div class="video-mockup">
                             <div class="video-panel">
                                 <div class="recording-badge"><span class="rec-dot"></span> RECORDING</div>
+                                <div class="doc-pills">
+                                    <div class="doc-pill"><i class="fas fa-check-circle check"></i> W-9 Form</div>
+                                    <div class="doc-pill"><i class="fas fa-check-circle check"></i> Insurance Cert</div>
+                                </div>
                                 <div class="avatar-circle">SC</div>
                                 <div class="person-name">Sarah Chen</div>
                                 <div class="person-title">New Customer &middot; Onboarding Session</div>
@@ -93,6 +112,12 @@
                                     <div class="wave-bar"></div>
                                 </div>
                                 <div class="ai-bubble">"Can you walk me through your current workflow and where you're seeing friction?"</div>
+                                <div class="conv-insights-float">
+                                    <h5>Conversation Insights</h5>
+                                    <div class="insight-row"><span>Engagement</span><div class="insight-bar"><div class="insight-fill" style="width:78%"></div></div></div>
+                                    <div class="insight-row"><span>Clarity</span><div class="insight-bar"><div class="insight-fill" style="width:65%"></div></div></div>
+                                    <div class="insight-row"><span>Completion</span><div class="insight-bar"><div class="insight-fill" style="width:42%"></div></div></div>
+                                </div>
                             </div>
                             <div class="qual-sidebar animate-bars">
                                 <h6>Qualification</h6>
@@ -112,6 +137,20 @@
                                     <label>Response Quality <span class="qual-pct">90%</span></label>
                                     <div class="qual-bar"><div class="qual-fill green" data-width="90%"></div></div>
                                 </div>
+                                <div class="detected-info" style="margin-top:12px">
+                                    <div class="detected-row show">
+                                        <span class="det-label">Mode</span>
+                                        <span class="det-value">Video</span>
+                                    </div>
+                                    <div class="detected-row show">
+                                        <span class="det-label">Duration</span>
+                                        <span class="det-value">8:42</span>
+                                    </div>
+                                    <div class="detected-row show">
+                                        <span class="det-label">Status</span>
+                                        <span class="det-value">Active</span>
+                                    </div>
+                                </div>
                                 <div class="fit-score" style="opacity:0;transition:opacity 0.6s ease">
                                     <div class="score-val">0%</div>
                                     <div class="score-label">SESSION SCORE</div>
@@ -126,165 +165,624 @@
 </section>
 
 <!-- ============================================================
-     2. USE CASES GRID
+     3. ORCHESTRATION HUB
      ============================================================ -->
-<section id="use-cases" class="section section-gray">
+<section class="section section-gray" id="orchestration-hub">
     <div class="container">
         <div class="section-header fade-in-up">
-            <div class="section-tag"><i class="fas fa-th-large"></i> Use Cases</div>
-            <h2 class="section-title">One AI. Every Repetitive Meeting. Handled.</h2>
-            <p class="section-subtitle">From candidate screening to customer research, ARIA Talk conducts the conversation, scores the results, and delivers structured reports — no human needed.</p>
+            <div class="section-tag"><i class="fas fa-project-diagram"></i> How It All Connects</div>
+            <h2 class="section-title">One Platform. Every Meeting. All Automated.</h2>
+            <p class="section-subtitle">ARIA Talk sits at the center of your meeting workflow &mdash; turning repetitive conversations into structured, automated outcomes.</p>
         </div>
-        <div class="dept-grid">
-            <!-- Card 1: Screening -->
-            <div class="dept-card fade-in-up delay-1">
-                <div class="card-icon green"><i class="fas fa-user-check"></i></div>
-                <h3>Screening &amp; Interviews</h3>
-                <p>Pre-screen candidates with AI-powered voice or video calls. Get scored summaries without lifting a finger.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> AI-conducted screening calls</li>
-                    <li><i class="fas fa-check-circle"></i> Real-time qualification scoring</li>
-                    <li><i class="fas fa-check-circle"></i> Automated shortlists</li>
-                    <li><i class="fas fa-check-circle"></i> Full transcripts &amp; recordings</li>
-                </ul>
+        <div class="orch-flow">
+            <!-- Input Column -->
+            <div class="orch-col orch-inputs">
+                <div class="orch-col-label">Your Meetings</div>
+                <div class="orch-node orch-input">
+                    <div class="orch-node-icon"><i class="fas fa-user-check"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Screening Calls</div>
+                        <div class="orch-node-detail">~45 min each</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-input">
+                    <div class="orch-node-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Discovery Calls</div>
+                        <div class="orch-node-detail">~30 min each</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-input">
+                    <div class="orch-node-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Onboarding Meetings</div>
+                        <div class="orch-node-detail">~60 min each</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-input">
+                    <div class="orch-node-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Training Sessions</div>
+                        <div class="orch-node-detail">~90 min each</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-input">
+                    <div class="orch-node-icon"><i class="fas fa-users"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Stand-ups</div>
+                        <div class="orch-node-detail">~15 min x daily</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-input">
+                    <div class="orch-node-icon"><i class="fas fa-poll"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Research Interviews</div>
+                        <div class="orch-node-detail">~45 min each</div>
+                    </div>
+                </div>
             </div>
-            <!-- Card 2: Lead Qualification -->
-            <div class="dept-card fade-in-up delay-2">
-                <div class="card-icon green"><i class="fas fa-bullseye"></i></div>
-                <h3>Lead Qualification</h3>
-                <p>Qualify inbound leads with budget, authority, need & timeline scoring, automated follow-ups, and CRM integration — around the clock.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Budget, authority, need & timeline scoring</li>
-                    <li><i class="fas fa-check-circle"></i> Automated follow-ups</li>
-                    <li><i class="fas fa-check-circle"></i> CRM integration</li>
-                    <li><i class="fas fa-check-circle"></i> Pipeline tracking</li>
-                </ul>
+
+            <!-- Center Hub -->
+            <div class="orch-center">
+                <div class="orch-connector orch-connector-in"></div>
+                <div class="orch-hub">
+                    <div class="orch-hub-pulse"></div>
+                    <div class="orch-hub-inner">
+                        <div class="orch-hub-logo">ARIA TALK</div>
+                        <div class="orch-hub-subtitle">AI Agent Platform</div>
+                    </div>
+                    <div class="orch-hub-stats">
+                        <span>24/7</span>
+                        <span>All meetings</span>
+                        <span>$0.10/min</span>
+                    </div>
+                </div>
+                <div class="orch-connector orch-connector-out"></div>
             </div>
-            <!-- Card 3: Intake & Onboarding -->
-            <div class="dept-card fade-in-up delay-3">
-                <div class="card-icon green"><i class="fas fa-clipboard-list"></i></div>
-                <h3>Intake &amp; Onboarding</h3>
-                <p>Collect documents, capture e-signatures, verify compliance, and provision systems in a single conversation.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Document collection</li>
-                    <li><i class="fas fa-check-circle"></i> E-signature capture</li>
-                    <li><i class="fas fa-check-circle"></i> Compliance verification</li>
-                    <li><i class="fas fa-check-circle"></i> System provisioning</li>
-                </ul>
-            </div>
-            <!-- Card 4: Training -->
-            <div class="dept-card fade-in-up delay-1">
-                <div class="card-icon green"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Training &amp; Compliance</h3>
-                <p>Deliver training content, test comprehension, issue certifications, and track progress — conversationally.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Content delivery</li>
-                    <li><i class="fas fa-check-circle"></i> Comprehension testing</li>
-                    <li><i class="fas fa-check-circle"></i> Certification issuance</li>
-                    <li><i class="fas fa-check-circle"></i> Progress tracking</li>
-                </ul>
-            </div>
-            <!-- Card 5: Stand-ups -->
-            <div class="dept-card fade-in-up delay-2">
-                <div class="card-icon green"><i class="fas fa-comments"></i></div>
-                <h3>Stand-ups &amp; Check-ins</h3>
-                <p>Run daily stand-ups, detect blockers, track sentiment, and conduct structured reviews — on autopilot.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Daily stand-ups</li>
-                    <li><i class="fas fa-check-circle"></i> Blocker detection</li>
-                    <li><i class="fas fa-check-circle"></i> Sentiment tracking</li>
-                    <li><i class="fas fa-check-circle"></i> 30/60/90 reviews</li>
-                </ul>
-            </div>
-            <!-- Card 6: Research -->
-            <div class="dept-card fade-in-up delay-3">
-                <div class="card-icon green"><i class="fas fa-chart-pie"></i></div>
-                <h3>Customer Research</h3>
-                <p>Collect survey responses, extract themes, track NPS scores, and generate insight reports automatically.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Survey collection</li>
-                    <li><i class="fas fa-check-circle"></i> Theme extraction</li>
-                    <li><i class="fas fa-check-circle"></i> NPS tracking</li>
-                    <li><i class="fas fa-check-circle"></i> Insight reporting</li>
-                </ul>
+
+            <!-- Output Column -->
+            <div class="orch-col orch-outputs">
+                <div class="orch-col-label">Your Outcomes</div>
+                <div class="orch-node orch-output">
+                    <div class="orch-node-icon"><i class="fas fa-star"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Scored Summaries</div>
+                        <div class="orch-node-detail">Candidates ranked</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-output">
+                    <div class="orch-node-icon"><i class="fas fa-fire"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Qualified Leads</div>
+                        <div class="orch-node-detail">BANT complete</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-output">
+                    <div class="orch-node-icon"><i class="fas fa-check-double"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Completed Intake</div>
+                        <div class="orch-node-detail">Docs verified</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-output">
+                    <div class="orch-node-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Certifications</div>
+                        <div class="orch-node-detail">Compliance confirmed</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-output">
+                    <div class="orch-node-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Team Reports</div>
+                        <div class="orch-node-detail">Blockers surfaced</div>
+                    </div>
+                </div>
+                <div class="orch-node orch-output">
+                    <div class="orch-node-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="orch-node-text">
+                        <div class="orch-node-title">Research Insights</div>
+                        <div class="orch-node-detail">Themes extracted</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     3. HOW IT WORKS
+     4. USE CASES — TABBED
      ============================================================ -->
-<section id="how-it-works" class="section">
+<section class="section section-gray" id="use-cases">
     <div class="container">
         <div class="section-header fade-in-up">
-            <div class="section-tag"><i class="fas fa-cogs"></i> Process</div>
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Set up your first AI meeting in under 5 minutes. No code. No integrations. No engineering.</p>
+            <div class="section-tag"><i class="fas fa-th-large"></i> Meetings You Can Replace Today</div>
+            <h2 class="section-title">Every Repetitive Meeting Has a Replacement</h2>
+            <p class="section-subtitle">High-volume, low-value meetings drain your team. ARIA Talk replaces them with AI agents that get the same outcome &mdash; faster, cheaper, and 24/7.</p>
         </div>
-        <div class="steps-accordion fade-in-up">
-            <div class="step-item active">
-                <div class="step-header">
-                    <div class="step-number">1</div>
-                    <h3>Define Your Meeting</h3>
-                    <i class="fas fa-chevron-down step-toggle"></i>
+
+        <div class="use-case-tabs fade-in-up">
+            <div class="tab-toggle">
+                <button class="tab-btn active" data-tab="enterprise">Enterprise</button>
+                <button class="tab-btn" data-tab="individual">Individual &amp; Teams</button>
+            </div>
+        </div>
+
+        <!-- Enterprise Use Cases -->
+        <div class="use-grid-container active" data-tab="enterprise">
+            <div class="use-grid">
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-user-plus"></i></div>
+                    <h4>Employee Onboarding</h4>
+                    <p>Walk new hires through paperwork, benefits enrollment, and compliance training &mdash; collecting signatures, verifying documents, and completing setup before day one.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Supplier Onboarding</h4>
+                    <p>Qualify and onboard new vendors with guided conversations &mdash; collecting W-9s, insurance certificates, compliance docs, and contract signatures.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-user-tie"></i></div>
+                    <h4>Contractor Intake</h4>
+                    <p>Screen, verify, and onboard contractors at scale &mdash; background checks, NDA collection, skills assessment, and availability scheduling in one conversation.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <h4>Client Intake &amp; Setup</h4>
+                    <p>Replace kickoff meetings with AI-guided intake &mdash; collecting requirements, gathering assets, and establishing project scope asynchronously.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Compliance Training</h4>
+                    <p>Deliver mandatory training at scale &mdash; interactive sessions that adapt to comprehension, verify understanding, and track completion status.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Benefits Enrollment</h4>
+                    <p>Guide employees through open enrollment &mdash; explaining options, collecting elections, verifying dependents, and confirming submissions.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-door-open"></i></div>
+                    <h4>Exit Interviews</h4>
+                    <p>Conduct consistent, bias-free exit interviews &mdash; surfacing patterns across departures and capturing honest feedback.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h4>Internal Audits</h4>
+                    <p>Automate routine audit conversations &mdash; collecting documentation, verifying processes, identifying gaps, and generating compliance reports.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-user-check"></i></div>
+                    <h4>Employee Screening</h4>
+                    <p>Replace phone screens for high-volume hiring &mdash; interviewing every candidate with consistent structure, scoring responses, and delivering ranked summaries.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-file-signature"></i></div>
+                    <h4>Policy Acknowledgment</h4>
+                    <p>Replace mass email acknowledgments with conversational verification &mdash; ensuring employees understand new policies and documenting comprehension.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual & Teams Use Cases -->
+        <div class="use-grid-container" data-tab="individual">
+            <div class="use-grid">
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Lead Qualification</h4>
+                    <p>Replace discovery calls with instant AI conversations &mdash; BANT qualification on autopilot, hot leads routed to reps, pipeline reports with engagement data.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-poll"></i></div>
+                    <h4>Customer Research</h4>
+                    <p>Replace research interviews with AI conversations that probe deeper than surveys &mdash; at scale, for a fraction of the cost of scheduled calls.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-users"></i></div>
+                    <h4>Team Stand-ups</h4>
+                    <p>Replace daily stand-ups with async AI check-ins &mdash; blockers, progress, and sentiment aggregated and delivered to managers on their schedule.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-comment-dots"></i></div>
+                    <h4>1:1 Check-ins</h4>
+                    <p>Automate routine manager check-ins &mdash; tracking goals, surfacing blockers, measuring sentiment, and flagging issues that need synchronous attention.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-clipboard"></i></div>
+                    <h4>Meeting Prep</h4>
+                    <p>Let ARIA Talk pre-interview meeting participants to gather context &mdash; so when you do meet, you start with alignment instead of discovery.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-comments"></i></div>
+                    <h4>Feedback Collection</h4>
+                    <p>Replace feedback forms with conversational interviews &mdash; NPS deep-dives, feature prioritization, churn risk detection, and sentiment analysis.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h4>Scheduling &amp; Availability</h4>
+                    <p>Gather scheduling preferences conversationally &mdash; time zones, blackout dates, constraints, and preferences without the back-and-forth.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-rocket"></i></div>
+                    <h4>Project Kickoffs</h4>
+                    <p>Async project kickoffs for distributed teams &mdash; gathering requirements, aligning on scope, collecting constraints, and documenting decisions.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>Stakeholder Updates</h4>
+                    <p>Replace status meetings with conversational updates &mdash; ARIA Talk interviews stakeholders for updates, then delivers aggregated reports.</p>
+                </a>
+                <a href="#" class="use-card">
+                    <div class="use-icon"><i class="fas fa-book"></i></div>
+                    <h4>Knowledge Capture</h4>
+                    <p>Conduct structured knowledge transfer interviews &mdash; capturing tribal knowledge from departing team members or subject matter experts.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     5. COMMAND CENTER DASHBOARD
+     ============================================================ -->
+<section class="section" id="command-center">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-desktop"></i> The Platform</div>
+            <h2 class="section-title">Your Entire Meeting Load. One Dashboard.</h2>
+            <p class="section-subtitle">Six meeting types. All running simultaneously. Define what you need, ARIA Talk handles the conversation, you get structured outcomes back.</p>
+        </div>
+        <div class="cc-wrapper fade-in-up">
+            <div class="browser-chrome">
+                <div class="browser-bar">
+                    <div class="browser-dots"><span></span><span></span><span></span></div>
+                    <div class="browser-url"><i class="fas fa-lock"></i> talk.aria-orchestration.com/app/dashboard</div>
                 </div>
-                <div class="step-body">
-                    <p>Describe what you need from the conversation — the questions to ask, the scoring rubric, documents to collect, and escalation rules. ARIA Talk builds your AI meeting.</p>
-                    <div class="step-features">
-                        <div class="step-feature"><i class="fas fa-check"></i> Define questions, prompts, and conversation flow</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Set scoring rubrics and qualification criteria</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Specify documents to collect and verify</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Configure escalation rules and handoff triggers</div>
+                <div class="cc-dashboard">
+                    <!-- Sidebar -->
+                    <div class="cc-sidebar">
+                        <div class="cc-sidebar-header">Active Meetings <span class="cc-badge">6</span></div>
+                        <div class="cc-sidebar-list">
+                            <div class="cc-sidebar-row cc-active" data-pipeline="screening">
+                                <i class="fas fa-user-check"></i>
+                                <div class="cc-sidebar-info">
+                                    <div class="cc-sidebar-name">Screening</div>
+                                    <div class="cc-sidebar-detail">3 candidates</div>
+                                </div>
+                                <span class="mcr-status active">Live</span>
+                            </div>
+                            <div class="cc-sidebar-row" data-pipeline="lead-qual">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="cc-sidebar-info">
+                                    <div class="cc-sidebar-name">Lead Qual</div>
+                                    <div class="cc-sidebar-detail">Sarah Chen</div>
+                                </div>
+                                <span class="mcr-status complete">Done</span>
+                            </div>
+                            <div class="cc-sidebar-row" data-pipeline="onboarding">
+                                <i class="fas fa-clipboard-list"></i>
+                                <div class="cc-sidebar-info">
+                                    <div class="cc-sidebar-name">Onboarding</div>
+                                    <div class="cc-sidebar-detail">Acme Corp</div>
+                                </div>
+                                <span class="mcr-status active">Live</span>
+                            </div>
+                            <div class="cc-sidebar-row" data-pipeline="training">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="cc-sidebar-info">
+                                    <div class="cc-sidebar-name">Training</div>
+                                    <div class="cc-sidebar-detail">Safety cert</div>
+                                </div>
+                                <span class="mcr-status progress">8/12</span>
+                            </div>
+                            <div class="cc-sidebar-row" data-pipeline="standups">
+                                <i class="fas fa-users"></i>
+                                <div class="cc-sidebar-info">
+                                    <div class="cc-sidebar-name">Stand-ups</div>
+                                    <div class="cc-sidebar-detail">Eng team</div>
+                                </div>
+                                <span class="mcr-status complete">Done</span>
+                            </div>
+                            <div class="cc-sidebar-row" data-pipeline="research">
+                                <i class="fas fa-poll"></i>
+                                <div class="cc-sidebar-info">
+                                    <div class="cc-sidebar-name">Research</div>
+                                    <div class="cc-sidebar-detail">Batch #4</div>
+                                </div>
+                                <span class="mcr-status pending">Pend</span>
+                            </div>
+                        </div>
+                        <div class="cc-sidebar-stats">
+                            <span><strong>18</strong> today</span>
+                            <span><strong>94%</strong> complete</span>
+                            <span><strong>$12</strong> total</span>
+                        </div>
+                    </div>
+
+                    <!-- Pipeline -->
+                    <div class="cc-pipeline">
+                        <div class="cc-pipeline-headers">
+                            <div class="cc-pipeline-header"><span class="cc-step-num">1</span> You Define</div>
+                            <div class="cc-pipeline-header"><span class="cc-step-num">2</span> ARIA Handles</div>
+                            <div class="cc-pipeline-header"><span class="cc-step-num">3</span> You Get Back</div>
+                        </div>
+                        <div class="cc-pipeline-cols">
+                            <!-- Column 1: You Define -->
+                            <div class="cc-pipeline-col cc-col-define">
+                                <div class="cc-card cc-card-define" data-pipeline="screening">
+                                    <div class="cc-card-title">Screen Sr. Engineers</div>
+                                    <ul class="cc-card-list">
+                                        <li><i class="fas fa-circle"></i> System design experience?</li>
+                                        <li><i class="fas fa-circle"></i> Team leadership examples?</li>
+                                        <li><i class="fas fa-circle"></i> Architecture trade-offs?</li>
+                                    </ul>
+                                    <div class="cc-card-btn"><i class="fas fa-rocket"></i> Launch</div>
+                                </div>
+                                <div class="cc-card cc-card-define" data-pipeline="onboarding">
+                                    <div class="cc-card-title">Onboard Acme Corp</div>
+                                    <ul class="cc-card-list cc-card-checklist">
+                                        <li><i class="fas fa-check-square"></i> Collect NDA</li>
+                                        <li><i class="fas fa-check-square"></i> Verify insurance</li>
+                                        <li><i class="fas fa-square"></i> Setup billing</li>
+                                    </ul>
+                                    <div class="cc-card-btn"><i class="fas fa-rocket"></i> Launch</div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2: ARIA Handles -->
+                            <div class="cc-pipeline-col cc-col-handles">
+                                <div class="cc-card cc-card-live" data-pipeline="lead-qual">
+                                    <div class="cc-card-header">
+                                        <span class="cc-card-title">Sarah Chen</span>
+                                        <span class="mcr-status active">Live</span>
+                                    </div>
+                                    <div class="cc-card-subtitle">Lead Qualification</div>
+                                    <div class="cc-mini-wave">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="cc-speech-bubble">"Tell me about your budget timeline..."</div>
+                                    <div class="cc-progress">
+                                        <div class="cc-progress-bar" style="width:65%"></div>
+                                    </div>
+                                    <div class="cc-progress-label">65% complete</div>
+                                </div>
+                                <div class="cc-card cc-card-live" data-pipeline="standups">
+                                    <div class="cc-card-header">
+                                        <span class="cc-card-title">Engineering Stand-up</span>
+                                    </div>
+                                    <div class="cc-member-list">
+                                        <div class="cc-member"><i class="fas fa-check-circle"></i> Alice</div>
+                                        <div class="cc-member"><i class="fas fa-check-circle"></i> Bob</div>
+                                        <div class="cc-member cc-member-active"><i class="fas fa-circle"></i> Carlos</div>
+                                        <div class="cc-member cc-member-waiting"><i class="fas fa-clock"></i> Diana</div>
+                                    </div>
+                                    <div class="cc-progress">
+                                        <div class="cc-progress-bar" style="width:50%"></div>
+                                    </div>
+                                    <div class="cc-progress-label">2 of 4 complete</div>
+                                </div>
+                            </div>
+
+                            <!-- Column 3: You Get Back -->
+                            <div class="cc-pipeline-col cc-col-results">
+                                <div class="cc-card cc-card-result" data-pipeline="screening">
+                                    <div class="cc-card-header">
+                                        <span class="cc-card-title">Alex Torres</span>
+                                        <span class="cc-score">87%</span>
+                                    </div>
+                                    <div class="cc-card-subtitle">Screening Result</div>
+                                    <div class="cc-result-tag cc-tag-green"><i class="fas fa-check"></i> Strong Hire</div>
+                                </div>
+                                <div class="cc-card cc-card-result" data-pipeline="research">
+                                    <div class="cc-card-header">
+                                        <span class="cc-card-title">Research Batch #4</span>
+                                    </div>
+                                    <div class="cc-card-subtitle">12 interviews complete</div>
+                                    <div class="cc-themes">
+                                        <span class="cc-theme">Pricing</span>
+                                        <span class="cc-theme">Onboarding</span>
+                                        <span class="cc-theme">Support</span>
+                                    </div>
+                                    <div class="cc-card-action"><i class="fas fa-download"></i> Export</div>
+                                </div>
+                                <div class="cc-card cc-card-result" data-pipeline="training">
+                                    <div class="cc-card-header">
+                                        <span class="cc-card-title">Safety Certification</span>
+                                    </div>
+                                    <div class="cc-card-subtitle">8/8 certified</div>
+                                    <div class="cc-result-tag cc-tag-green"><i class="fas fa-shield-alt"></i> Compliant</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="step-item">
-                <div class="step-header">
-                    <div class="step-number">2</div>
-                    <h3>Share a Link</h3>
-                    <i class="fas fa-chevron-down step-toggle"></i>
+        </div>
+        <!-- Caption -->
+        <div class="cc-caption fade-in-up">
+            <div class="cc-caption-step">
+                <span class="cc-caption-num">1</span>
+                <span>Define what you need</span>
+            </div>
+            <div class="cc-caption-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="cc-caption-step">
+                <span class="cc-caption-num">2</span>
+                <span>ARIA has the meeting</span>
+            </div>
+            <div class="cc-caption-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="cc-caption-step">
+                <span class="cc-caption-num">3</span>
+                <span>Get structured results</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     6. HOW IT WORKS — WITH MOCKUPS
+     ============================================================ -->
+<section class="section" id="how-it-works">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-cogs"></i> How It Works</div>
+            <h2 class="section-title">Four Steps to Replace Any Meeting</h2>
+            <p class="section-subtitle">Define what you need, share a link, and let the AI agent handle the rest.</p>
+        </div>
+        <div class="hiw-steps">
+            <!-- Step 1: Setup -->
+            <div class="hiw-step fade-in-up">
+                <div class="hiw-step-text">
+                    <div class="hiw-step-badge">1</div>
+                    <h3>Define What You Need</h3>
+                    <p>Write down what you'd normally cover in the meeting &mdash; the questions, the criteria, the outcome you need. Pick a template or build from scratch in minutes.</p>
                 </div>
-                <div class="step-body">
-                    <p>Send a link, QR code, or embed the widget. Invitees join on any device, any browser, in any of 74+ languages. No app downloads required.</p>
-                    <div class="step-features">
-                        <div class="step-feature"><i class="fas fa-check"></i> Unique session links for each invitee</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> QR code for in-person events and print</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Embeddable widget for your website or portal</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Works on any device, any browser, any language</div>
+                <div class="hiw-step-mockup">
+                    <div class="browser-chrome">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url"><i class="fas fa-lock"></i> talk.aria-orchestration.com/app/setup</div>
+                        </div>
+                        <div class="setup-mockup">
+                            <div class="setup-form">
+                                <h5><i class="fas fa-plus-circle" style="color:var(--aria-green);margin-right:6px;font-size:13px;"></i> New Conversation</h5>
+                                <div class="setup-field">
+                                    <label>Conversation Name</label>
+                                    <div class="field-input">Inbound Lead Qualification</div>
+                                </div>
+                                <div class="setup-field">
+                                    <label>Use Case</label>
+                                    <div class="field-select">Lead Qualification <i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="setup-field">
+                                    <label>Questions (4)</label>
+                                    <div class="setup-questions">
+                                        <div class="setup-q-item"><i class="fas fa-circle"></i> What challenge are you trying to solve?</div>
+                                        <div class="setup-q-item"><i class="fas fa-circle"></i> What's your timeline for a solution?</div>
+                                        <div class="setup-q-item"><i class="fas fa-circle"></i> Do you have a budget range in mind?</div>
+                                        <div class="setup-q-item"><i class="fas fa-circle"></i> Who else is involved in this decision?</div>
+                                    </div>
+                                </div>
+                                <div class="setup-launch-btn"><i class="fas fa-rocket"></i> Launch Conversation</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="step-item">
-                <div class="step-header">
-                    <div class="step-number">3</div>
+
+            <!-- Step 2: Share -->
+            <div class="hiw-step fade-in-up">
+                <div class="hiw-step-mockup">
+                    <div class="browser-chrome">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url"><i class="fas fa-lock"></i> talk.aria-orchestration.com/conversations</div>
+                        </div>
+                        <div class="share-panel">
+                            <div class="share-panel-inner">
+                                <div class="share-success">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Your conversation is live!</span>
+                                </div>
+                                <div class="share-url-box">
+                                    <span class="url-text">talk.aria-orchestration.com/c/abc123</span>
+                                    <span class="copy-btn"><i class="fas fa-copy"></i> Copy</span>
+                                </div>
+                                <div class="share-qr">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="share-options">
+                                    <span class="share-option"><i class="fas fa-envelope"></i> Email</span>
+                                    <span class="share-option"><i class="fab fa-slack"></i> Slack</span>
+                                    <span class="share-option"><i class="fas fa-code"></i> Embed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hiw-step-text">
+                    <div class="hiw-step-badge">2</div>
+                    <h3>Share One Link</h3>
+                    <p>Drop the link in an email, embed it on your site, or send it via Slack. The person clicks and the meeting starts instantly &mdash; no calendar, no scheduling, no waiting.</p>
+                </div>
+            </div>
+
+            <!-- Step 3: AI Conversation -->
+            <div class="hiw-step fade-in-up">
+                <div class="hiw-step-text">
+                    <div class="hiw-step-badge">3</div>
                     <h3>ARIA Has the Meeting</h3>
-                    <i class="fas fa-chevron-down step-toggle"></i>
+                    <p>Your AI agent has the conversation &mdash; asking your questions, digging deeper where it matters, collecting documents, and keeping things on track. It adapts in real time, just like your best team member would.</p>
                 </div>
-                <div class="step-body">
-                    <p>ARIA Talk conducts the conversation via voice, video, or text. It asks questions, listens, scores in real time, collects documents, and captures e-signatures.</p>
-                    <div class="step-features">
-                        <div class="step-feature"><i class="fas fa-check"></i> Natural voice/video/text conversation</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Real-time qualification scoring</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> In-conversation document collection</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> E-signature capture during the session</div>
+                <div class="hiw-step-mockup">
+                    <div class="browser-chrome">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url"><i class="fas fa-lock"></i> talk.aria-orchestration.com/c/abc123</div>
+                        </div>
+                        <div class="mini-video">
+                            <div class="recording-badge"><span class="rec-dot"></span> Recording</div>
+                            <div class="mini-person"><img src="https://i.pravatar.cc/150?img=32" alt="AI Agent"></div>
+                            <div class="mini-waveform">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="mini-speech">"That's helpful. And what's your timeline for getting a solution in place?"</div>
+                            <div class="mode-toggle">
+                                <span class="mode-pill active"><i class="fas fa-video"></i> Video</span>
+                                <span class="mode-pill"><i class="fas fa-keyboard"></i> Text</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="step-item">
-                <div class="step-header">
-                    <div class="step-number">4</div>
-                    <h3>Get Structured Results</h3>
-                    <i class="fas fa-chevron-down step-toggle"></i>
-                </div>
-                <div class="step-body">
-                    <p>Receive scored summaries, full transcripts, collected documents, and recommended next steps — delivered to your inbox or pushed to your systems via API.</p>
-                    <div class="step-features">
-                        <div class="step-feature"><i class="fas fa-check"></i> Scored summaries with qualification breakdown</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Full transcripts and recordings</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Collected documents organized and verified</div>
-                        <div class="step-feature"><i class="fas fa-check"></i> Recommended next steps and escalations</div>
+
+            <!-- Step 4: Results -->
+            <div class="hiw-step fade-in-up">
+                <div class="hiw-step-mockup">
+                    <div class="browser-chrome">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url"><i class="fas fa-lock"></i> talk.aria-orchestration.com/app/results</div>
+                        </div>
+                        <div class="handoff-doc" style="border:none;border-radius:0;box-shadow:none;">
+                            <div class="handoff-doc-header">
+                                <h4>Conversation Results</h4>
+                                <span class="handoff-badge">Complete</span>
+                            </div>
+                            <div class="handoff-doc-body">
+                                <div class="handoff-block">
+                                    <h5>Lead</h5>
+                                    <p style="font-weight:600;">Sarah Chen, VP Ops</p>
+                                    <div class="handoff-score" style="margin-top:8px;">
+                                        <div class="handoff-score-circle" style="--score-pct:90%">
+                                            <div class="handoff-score-inner">90%</div>
+                                        </div>
+                                        <div class="handoff-score-text">Qualification Score</div>
+                                    </div>
+                                </div>
+                                <div class="handoff-block">
+                                    <h5>BANT Summary</h5>
+                                    <ul>
+                                        <li><i class="fas fa-check" style="color:var(--green-500);margin-right:6px;font-size:11px"></i> Budget: $50-80K approved</li>
+                                        <li><i class="fas fa-check" style="color:var(--green-500);margin-right:6px;font-size:11px"></i> Authority: Final decision maker</li>
+                                        <li><i class="fas fa-check" style="color:var(--green-500);margin-right:6px;font-size:11px"></i> Need: Manual process bottleneck</li>
+                                        <li><i class="fas fa-check" style="color:var(--green-500);margin-right:6px;font-size:11px"></i> Timeline: Q2 implementation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="handoff-doc-footer">
+                                <span style="font-size:11px;color:var(--gray-500)">Qualified 2 min ago</span>
+                                <div class="handoff-actions">
+                                    <button><i class="fas fa-file-alt"></i> Transcript</button>
+                                    <button><i class="fas fa-paper-plane"></i> Route to Rep</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="hiw-step-text">
+                    <div class="hiw-step-badge">4</div>
+                    <h3>Get the Outcome, Skip the Meeting</h3>
+                    <p>You get a scored summary, full transcript, collected documents, and a recommended action &mdash; pushed directly to your CRM, ATS, or project tool. The meeting happened. You weren't there. The outcome is better.</p>
                 </div>
             </div>
         </div>
@@ -292,91 +790,195 @@
 </section>
 
 <!-- ============================================================
-     4. DIFFERENTIATION
+     7. DEPARTMENTS GRID
      ============================================================ -->
 <section class="section section-gray">
     <div class="container">
         <div class="section-header fade-in-up">
-            <div class="section-tag"><i class="fas fa-star"></i> Differentiation</div>
-            <h2 class="section-title">Why This Is Different</h2>
-            <p class="section-subtitle">ARIA Talk doesn't just record your meeting. It replaces it entirely.</p>
+            <div class="section-tag"><i class="fas fa-building"></i> Works Across Your Org</div>
+            <h2 class="section-title">Every Team Has Meetings They Shouldn't Be In</h2>
+            <p class="section-subtitle">If the meeting is repetitive, high-volume, or follows a structure &mdash; ARIA Talk can replace it.</p>
         </div>
-        <div class="grid-2 fade-in-up" style="gap:32px;align-items:start">
-            <!-- Comparison Table -->
-            <div class="card" style="padding:0;overflow:hidden">
-                <table class="comparison-table" style="box-shadow:none;border:none">
+        <div class="cap-grid">
+            <div class="cap-card fade-in-up delay-1">
+                <div class="cap-icon"><i class="fas fa-user-tie"></i></div>
+                <h4>Recruiting</h4>
+                <p>Replace phone screens and first-round interviews. AI screens every candidate 24/7 with perfect consistency and delivers scored summaries to hiring managers.</p>
+                <ul class="cap-bullets">
+                    <li>Screen candidates 24/7 with no scheduling</li>
+                    <li>Consistent evaluations across every interview</li>
+                    <li>Scored summaries delivered to hiring managers</li>
+                    <li>Bias-free structured assessments</li>
+                </ul>
+                <a href="#use-cases" class="dept-card-link">Learn more</a>
+            </div>
+            <div class="cap-card fade-in-up delay-2">
+                <div class="cap-icon"><i class="fas fa-bullhorn"></i></div>
+                <h4>Sales</h4>
+                <p>Replace discovery calls and lead qualification meetings. Every inbound lead gets an instant AI conversation &mdash; BANT discovery on autopilot, hot leads routed to reps.</p>
+                <ul class="cap-bullets">
+                    <li>Instant lead qualification via conversation</li>
+                    <li>BANT discovery on autopilot</li>
+                    <li>Hot-lead routing to the right rep</li>
+                    <li>Pipeline reports with engagement data</li>
+                </ul>
+                <a href="#use-cases" class="dept-card-link">Learn more</a>
+            </div>
+            <div class="cap-card fade-in-up delay-3">
+                <div class="cap-icon"><i class="fas fa-clipboard-list"></i></div>
+                <h4>Operations</h4>
+                <p>Replace intake meetings and onboarding calls. Guided AI conversations collect information, verify documents, and complete setup &mdash; no meeting required.</p>
+                <ul class="cap-bullets">
+                    <li>Replace intake forms with conversations</li>
+                    <li>Automated document collection</li>
+                    <li>Compliance verification built in</li>
+                    <li>Streamlined employee onboarding</li>
+                </ul>
+                <a href="#use-cases" class="dept-card-link">Learn more</a>
+            </div>
+            <div class="cap-card fade-in-up delay-1">
+                <div class="cap-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h4>Learning &amp; Development</h4>
+                <p>Replace training sessions and certification reviews. Interactive AI conversations that teach, assess, and certify &mdash; adapting to each learner in real time.</p>
+                <ul class="cap-bullets">
+                    <li>Interactive conversational training</li>
+                    <li>Real-time comprehension assessment</li>
+                    <li>Certification and compliance tracking</li>
+                    <li>Adaptive difficulty based on responses</li>
+                </ul>
+                <a href="#use-cases" class="dept-card-link">Learn more</a>
+            </div>
+            <div class="cap-card fade-in-up delay-2">
+                <div class="cap-icon"><i class="fas fa-people-arrows"></i></div>
+                <h4>People Management</h4>
+                <p>Replace stand-ups, 1:1s, and pulse surveys. Async AI check-ins on each person's schedule with automatic blocker detection and team summaries.</p>
+                <ul class="cap-bullets">
+                    <li>Async stand-ups and check-ins</li>
+                    <li>Automatic blocker detection</li>
+                    <li>Sentiment tracking over time</li>
+                    <li>Aggregated team summaries</li>
+                </ul>
+                <a href="#use-cases" class="dept-card-link">Learn more</a>
+            </div>
+            <div class="cap-card fade-in-up delay-3">
+                <div class="cap-icon"><i class="fas fa-poll"></i></div>
+                <h4>Customer Experience</h4>
+                <p>Replace research calls and customer interviews. AI conversations that uncover insights surveys can't capture &mdash; at scale, for a fraction of the cost.</p>
+                <ul class="cap-bullets">
+                    <li>Research interviews at scale</li>
+                    <li>NPS deep-dives with follow-ups</li>
+                    <li>Feature prioritization from real feedback</li>
+                    <li>Churn risk detection and alerts</li>
+                </ul>
+                <a href="#use-cases" class="dept-card-link">Learn more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     8. DIFFERENTIATION
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-bolt"></i> Why This Is Different</div>
+            <h2 class="section-title">Not a Bot That Joins Your Meeting. An Agent That Replaces It.</h2>
+            <p class="section-subtitle">Transcription tools save you 10 minutes of note-taking. ARIA Talk saves you the entire meeting.</p>
+        </div>
+
+        <div class="diff-grid">
+            <!-- Card 1: Not a Transcription Bot -->
+            <div class="diff-card fade-in-up delay-1">
+                <div class="diff-card-icon"><i class="fas fa-microphone-slash"></i></div>
+                <div class="diff-card-tag">Not Another Meeting Bot</div>
+                <h4>Transcription Bots Take Notes. ARIA Talk Takes the Meeting.</h4>
+                <p>Meeting bots record what happened. ARIA Talk makes it happen &mdash; without you. It doesn't join your meeting as a silent observer. It replaces the meeting entirely.</p>
+
+                <table class="diff-table">
                     <thead>
                         <tr>
-                            <th>Capability</th>
-                            <th>Meeting Tools (Zoom AI, Otter, etc.)</th>
-                            <th>ARIA Talk</th>
+                            <th></th>
+                            <th><i class="fas fa-times-circle" style="color:var(--gray-400);margin-right:4px"></i> Transcription Bot</th>
+                            <th><i class="fas fa-check-circle" style="color:var(--green-500);margin-right:4px"></i> ARIA Talk</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Requires you to attend</td>
-                            <td><i class="fas fa-check"></i> Yes</td>
-                            <td><i class="fas fa-times"></i> No</td>
+                            <td>You attend the meeting</td>
+                            <td class="diff-bad">Yes</td>
+                            <td class="diff-good">No</td>
                         </tr>
                         <tr>
-                            <td>Conducts the meeting</td>
-                            <td><i class="fas fa-times"></i> No</td>
-                            <td><i class="fas fa-check"></i> Yes</td>
+                            <td>Asks follow-up questions</td>
+                            <td class="diff-bad">No</td>
+                            <td class="diff-good">Yes</td>
                         </tr>
                         <tr>
-                            <td>Real-time scoring</td>
-                            <td><i class="fas fa-times"></i> No</td>
-                            <td><i class="fas fa-check"></i> Yes</td>
+                            <td>Scores &amp; qualifies</td>
+                            <td class="diff-bad">No</td>
+                            <td class="diff-good">Yes</td>
                         </tr>
                         <tr>
-                            <td>Document collection</td>
-                            <td><i class="fas fa-times"></i> No</td>
-                            <td><i class="fas fa-check"></i> Yes</td>
+                            <td>Works 24/7 on-demand</td>
+                            <td class="diff-bad">No</td>
+                            <td class="diff-good">Yes</td>
                         </tr>
                         <tr>
-                            <td>Works without you</td>
-                            <td><i class="fas fa-times"></i> No</td>
-                            <td><i class="fas fa-check"></i> Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Cross-meeting memory</td>
-                            <td><i class="fas fa-times"></i> No</td>
-                            <td><i class="fas fa-check"></i> Yes</td>
+                            <td>Time saved</td>
+                            <td class="diff-bad">~10 min of notes</td>
+                            <td class="diff-good">The entire meeting</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Persistent Context -->
-            <div class="card">
-                <div class="card-icon green"><i class="fas fa-brain"></i></div>
-                <h3>Persistent Context Across Meetings</h3>
-                <p style="margin-bottom:20px">ARIA Talk remembers previous conversations with the same person. Context carries forward automatically.</p>
-                <div style="display:flex;flex-direction:column;gap:12px">
-                    <div style="background:var(--aria-light-green);border-radius:10px;padding:14px">
-                        <div style="font-size:11px;font-weight:700;color:var(--aria-green-dark);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Meeting 1 &middot; Customer Onboarding</div>
-                        <div style="font-size:13px;color:var(--gray-600)">"Customer uses Salesforce, needs Slack integration, going live in 3 weeks."</div>
-                    </div>
-                    <div style="text-align:center;color:var(--aria-green);font-size:12px"><i class="fas fa-arrow-down"></i> Context carried forward</div>
-                    <div style="background:var(--aria-light-green);border-radius:10px;padding:14px">
-                        <div style="font-size:11px;font-weight:700;color:var(--aria-green-dark);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Meeting 2 &middot; Training Session</div>
-                        <div style="font-size:13px;color:var(--gray-600)">"Welcome back, Sarah. You mentioned going live in 3 weeks — let's cover the Salesforce integration first."</div>
-                    </div>
-                    <div style="text-align:center;color:var(--aria-green);font-size:12px"><i class="fas fa-arrow-down"></i> Context carried forward</div>
-                    <div style="background:var(--aria-light-green);border-radius:10px;padding:14px">
-                        <div style="font-size:11px;font-weight:700;color:var(--aria-green-dark);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Meeting 3 &middot; 30-Day Check-in</div>
-                        <div style="font-size:13px;color:var(--gray-600)">"You've been live for a month. During training you flagged Slack notifications — how has that been working?"</div>
-                    </div>
-                </div>
+            <!-- Card 2: Cross-Meeting Memory -->
+            <div class="diff-card fade-in-up delay-2">
+                <div class="diff-card-icon"><i class="fas fa-brain"></i></div>
+                <div class="diff-card-tag">Persistent Context</div>
+                <h4>Every Meeting Builds on the Last.</h4>
+                <p>ARIA Talk remembers what was discussed, what was promised, and what's still outstanding. Follow-up meetings reference prior context automatically &mdash; no briefing required.</p>
+
+                <ul class="diff-examples">
+                    <li>
+                        <div class="diff-example-icon"><i class="fas fa-user-check"></i></div>
+                        <div>
+                            <strong>Screening</strong>
+                            <span>Second-round interviews reference first-round answers and flag gaps</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="diff-example-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <div>
+                            <strong>Onboarding</strong>
+                            <span>Picks up where the last session stopped &mdash; docs already collected, next steps queued</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="diff-example-icon"><i class="fas fa-users"></i></div>
+                        <div>
+                            <strong>Stand-ups</strong>
+                            <span>Tracks blockers over time and surfaces patterns: "This blocker has persisted for 3 days"</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="diff-example-icon"><i class="fas fa-poll"></i></div>
+                        <div>
+                            <strong>Research</strong>
+                            <span>Interviews across participants build a cumulative theme map automatically</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     5. ROI METRICS
+     9. ROI METRICS
      ============================================================ -->
-<section class="section">
+<section class="section section-gray">
     <div class="container">
         <div class="section-header fade-in-up">
             <div class="section-tag"><i class="fas fa-chart-line"></i> Impact</div>
@@ -413,7 +1015,7 @@
 </section>
 
 <!-- ============================================================
-     6. ENTERPRISE SECURITY
+     10. ENTERPRISE SECURITY
      ============================================================ -->
 <section id="security" class="section section-dark">
     <div class="container">
@@ -443,7 +1045,7 @@
 </section>
 
 <!-- ============================================================
-     7. PRICING PREVIEW
+     11. PRICING PREVIEW
      ============================================================ -->
 <section id="pricing" class="section">
     <div class="container">
@@ -463,13 +1065,13 @@
                     <li><i class="fas fa-check"></i> Conversations up to 20 minutes each</li>
                     <li><i class="fas fa-check"></i> Unlimited conversations per month</li>
                     <li><i class="fas fa-check"></i> $0.10/min usage-based pricing</li>
-                    <li><i class="fas fa-check"></i> All 6 use cases</li>
+                    <li><i class="fas fa-check"></i> All use cases</li>
                     <li><i class="fas fa-check"></i> Voice, video &amp; text</li>
                     <li><i class="fas fa-check"></i> Scored summaries &amp; transcripts</li>
                     <li><i class="fas fa-check"></i> Email support</li>
                     <li><i class="fas fa-check"></i> 14-day free trial</li>
                 </ul>
-                <a href="signup.html" class="btn btn-primary btn-lg">Start Free Trial</a>
+                <a href="signup.html" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Start Free Trial</a>
             </div>
             <!-- Enterprise -->
             <div class="pricing-card">
@@ -485,14 +1087,161 @@
                     <li><i class="fas fa-check"></i> White-label option</li>
                     <li><i class="fas fa-check"></i> SLA guarantees</li>
                 </ul>
-                <a href="pricing.html" class="btn btn-outline btn-lg">Talk to Sales</a>
+                <a href="pricing.html" class="btn btn-outline btn-lg" style="width:100%;justify-content:center">Talk to Sales</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     8. CTA SECTION
+     12. ROADMAP
+     ============================================================ -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-road"></i> Coming Soon</div>
+            <h2 class="section-title">What We're Building Next</h2>
+            <p class="section-subtitle">Our roadmap is shaped by customer feedback. Here is what is on the horizon.</p>
+        </div>
+        <div class="roadmap-grid">
+            <div class="roadmap-card fade-in-up delay-1">
+                <div class="icon"><i class="fas fa-microphone-alt"></i></div>
+                <h4>Custom Voice Options</h4>
+                <p>Choose from multiple AI voice profiles or clone your own brand voice.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-2">
+                <div class="icon"><i class="fas fa-language"></i></div>
+                <h4>Multi-Language Support</h4>
+                <p>Conduct conversations in 20+ languages with automatic translation.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-3">
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>CAPTCHA Verification</h4>
+                <p>Built-in verification to ensure conversations are with real humans.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-4">
+                <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+                <h4>Email Sequences</h4>
+                <p>Automated email follow-ups and reminders to drive completion rates.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-1">
+                <div class="icon"><i class="fas fa-tv"></i></div>
+                <h4>Presentation Mode</h4>
+                <p>AI agent presents slides and materials during the conversation.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-2">
+                <div class="icon"><i class="fas fa-question-circle"></i></div>
+                <h4>Q&amp;A Mode</h4>
+                <p>Let participants ask questions and get instant, sourced answers.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-3">
+                <div class="icon"><i class="fas fa-plug"></i></div>
+                <h4>Native Integrations</h4>
+                <p>Direct integrations with Salesforce, HubSpot, Workday, and more.</p>
+            </div>
+            <div class="roadmap-card fade-in-up delay-4">
+                <div class="icon"><i class="fas fa-chart-pie"></i></div>
+                <h4>Data Analytics View</h4>
+                <p>Advanced dashboards with trends, cohort analysis, and AI-driven insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     13. TESTIMONIALS
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-quote-left"></i> Testimonials</div>
+            <h2 class="section-title">Trusted by Teams Everywhere</h2>
+            <p class="section-subtitle">See what our customers say about running their conversations with ARIA Talk.</p>
+        </div>
+        <div class="test-grid">
+            <div class="test-card fade-in-up delay-1">
+                <blockquote>&ldquo;We used to spend 40 hours a week on screening calls. ARIA Talk replaced every single one. Our hiring managers only review scored summaries now &mdash; we cut time-to-hire by 60%.&rdquo;</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar"><img src="https://i.pravatar.cc/150?img=47" alt="Sarah Mitchell"></div>
+                    <div>
+                        <div class="name">Sarah Mitchell</div>
+                        <div class="role">VP of Talent, CloudScale Inc.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card fade-in-up delay-2">
+                <blockquote>&ldquo;Our SDRs were in back-to-back discovery calls with unqualified leads. We replaced those meetings with ARIA Talk &mdash; now we only talk to prospects who are genuinely ready to buy. Pipeline quality went up 40%.&rdquo;</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar"><img src="https://i.pravatar.cc/150?img=59" alt="James Park"></div>
+                    <div>
+                        <div class="name">James Park</div>
+                        <div class="role">Head of Revenue, DataBridge</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card fade-in-up delay-3">
+                <blockquote>&ldquo;We replaced 200+ customer research calls with ARIA Talk. The depth of insight from AI conversations is incomparable to surveys, and our product team finally has the qualitative data they need &mdash; without scheduling a single meeting.&rdquo;</blockquote>
+                <div class="test-author">
+                    <div class="test-avatar"><img src="https://i.pravatar.cc/150?img=29" alt="Elena Torres"></div>
+                    <div>
+                        <div class="name">Elena Torres</div>
+                        <div class="role">Director of Research, Lumina Health</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     14. FAQ
+     ============================================================ -->
+<section class="section section-gray">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-tag"><i class="fas fa-question-circle"></i> FAQ</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about ARIA Talk.</p>
+        </div>
+        <div class="faq-list fade-in-up">
+            <div class="faq-item">
+                <div class="faq-q">What does &ldquo;Replace Your Meeting&rdquo; actually mean? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">It means exactly what it says. If you have a meeting that follows a structure &mdash; screening, qualification, onboarding, training, check-ins, research &mdash; ARIA Talk's AI agent has that meeting for you. You define what you need covered, share a link, and the AI handles the live voice or video conversation. You get scored summaries, transcripts, and structured data &mdash; without ever being in the meeting.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How is this different from a chatbot? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Chatbots handle text-based Q&amp;A with predefined decision trees. ARIA Talk conducts full voice and video conversations with adaptive, context-aware follow-ups. It feels like talking to a real person, not clicking through a script. The AI listens, understands nuance, asks intelligent follow-up questions, and produces structured insights that go far beyond what any chatbot can deliver.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How much does ARIA Talk cost? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">ARIA Talk starts at $79/month per seat, which includes 20 minutes of conversation time. Additional minutes are billed at $0.10/min. Enterprise plans with unlimited conversations and custom pricing are available for larger teams. There are no setup fees, no long-term contracts, and you can start with a free trial.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is my conversation data secure? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Absolutely. ARIA Talk is SOC 2 Type II certified and fully compliant with GDPR and CCPA. All conversations are encrypted end-to-end, both in transit and at rest. Your data is never used to train AI models. We offer data residency options for both EU and US, and enterprise customers can configure custom data retention policies.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How long does it take to set up? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Most teams are up and running within 15 minutes. Choose a use case template, customize your questions and scoring criteria, and you are ready to share your first link. No technical setup, no code, no IT involvement required. Enterprise deployments with custom integrations typically take 1-2 weeks.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What integrations does ARIA Talk support? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">ARIA Talk integrates with your existing tools via webhooks, allowing you to push conversation results to any system. We support direct integrations with popular ATS platforms, CRMs, and project management tools. Enterprise plans include custom API access and dedicated integration support. Native integrations with Salesforce, HubSpot, and Workday are on our roadmap.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What kinds of meetings can ARIA Talk replace? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">ARIA Talk replaces six types of meetings out of the box: screening interviews, discovery/qualification calls, intake and onboarding meetings, training sessions, stand-ups and check-ins, and customer research interviews. Each comes with pre-built templates you can customize. You can also create custom flows for any structured meeting your team is tired of having.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can participants use ARIA Talk on mobile devices? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes. ARIA Talk works entirely in the browser with no app downloads required. Participants simply click the link you share and the conversation begins immediately. It works on desktop, tablet, and mobile devices across all major browsers, making it accessible to anyone, anywhere.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     15. CTA SECTION
      ============================================================ -->
 <section class="cta-section">
     <div class="container fade-in-up">
@@ -507,7 +1256,7 @@
 </section>
 
 <!-- ============================================================
-     9. FOOTER
+     16. FOOTER
      ============================================================ -->
 <footer class="footer">
     <div class="container">
@@ -515,7 +1264,7 @@
             <div class="footer-brand">
                 <div class="footer-brand-name">ARIA Talk</div>
                 <div class="footer-brand-sub">Powered by ARIA Orchestration Solutions</div>
-                <p>AI that conducts your meetings, scores the results, and sends you a summary. Screening, onboarding, training, check-ins, and more — you never have to attend.</p>
+                <p>AI that conducts your meetings, scores the results, and sends you a summary. Screening, onboarding, training, check-ins, and more &mdash; you never have to attend.</p>
             </div>
             <div class="footer-col">
                 <h4>Use Cases</h4>
@@ -525,6 +1274,8 @@
                 <a href="#use-cases">Training &amp; Compliance</a>
                 <a href="#use-cases">Stand-ups &amp; Check-ins</a>
                 <a href="#use-cases">Customer Research</a>
+                <a href="#use-cases">Exit Interviews</a>
+                <a href="#use-cases">Benefits Enrollment</a>
             </div>
             <div class="footer-col">
                 <h4>Product</h4>
@@ -537,7 +1288,7 @@
                 <h4>ARIA Platform</h4>
                 <a href="../">ARIA Orchestration Solutions</a>
                 <a href="../#agents">All Agents</a>
-                <a href="../">All Workflows</a>
+                <a href="../workflows/">All Workflows</a>
                 <a href="../">Contact</a>
             </div>
         </div>
@@ -550,5 +1301,8 @@
 
 <script src="../js/shared.js"></script>
 <script src="../js/animations.js"></script>
+<script src="../js/orchestration-hub.js"></script>
+<script src="../js/use-case-tabs.js"></script>
+<script src="../js/command-center.js"></script>
 </body>
 </html>
